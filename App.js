@@ -9,6 +9,7 @@ import {
   ViewPagerAndroid
 } from "react-native";
 import ViewPager from "@react-native-community/viewpager";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function App() {
   return (
@@ -20,7 +21,21 @@ export default function App() {
         <Text style={styles.text1}>Second page</Text>
       </View>
       <View style={styles.pageStyle3} key="3">
-        <Text style={styles.text2}>Third page</Text>
+        <Text style={styles.text2}>Gustavo's page</Text>
+        <View
+          style={
+            (styles.buttonDiv3,
+            {
+              width: "100%",
+              display: "flex",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "flex-end"
+            })
+          }
+        >
+          <Button title="Next" />
+        </View>
       </View>
     </ViewPager>
   );
@@ -70,5 +85,13 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: "#000000",
     fontFamily: "monospace"
+  },
+  buttonDiv3: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    marginBottom: "5%"
   }
 });
